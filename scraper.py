@@ -10,12 +10,12 @@ def fetch_trending_routes(origin, destination):
 
     try:
         pytrends = TrendReq(hl='en-US', tz=360)
-        time.sleep(3)  # Add delay to avoid 429 rate limit
+        time.sleep(3) 
         pytrends.build_payload([kw], cat=0, timeframe='today 3-m', geo='AU', gprop='')
         data = pytrends.interest_over_time()
 
         if data.empty or 'isPartial' not in data:
-            print("⚠️ No trend data returned. Using fallback.")
+            print("No trend data returned. Using fallback.")
             return generate_mock_data()
 
         data = data.reset_index()
@@ -23,7 +23,7 @@ def fetch_trending_routes(origin, destination):
         return data[["date", "interest"]]
 
     except Exception as e:
-        print(f"❌ pytrends failed: {e}")
+        print(f"pytrends failed: {e}")
         return generate_mock_data()
 
 def generate_mock_data():
