@@ -5,9 +5,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# ✅ For Groq usage
 openai.api_key = os.getenv("GROQ_API_KEY")
-openai.api_base = "https://api.groq.com/openai/v1"  # ✅ Groq endpoint
+openai.api_base = "https://api.groq.com/openai/v1" 
 
 def generate_insight(data_records):
     prompt = f"""
@@ -19,7 +18,7 @@ def generate_insight(data_records):
 
     try:
         response = openai.ChatCompletion.create(
-            model="llama3-8b-8192",  # ✅ Groq-supported model
+            model="llama3-8b-8192", 
             messages=[{"role": "user", "content": prompt}]
         )
         return response.choices[0].message["content"]
