@@ -1,5 +1,3 @@
-# scraper.py
-
 from pytrends.request import TrendReq
 import pandas as pd
 from datetime import datetime, timedelta
