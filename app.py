@@ -58,7 +58,7 @@ AIRPORT_CODES = {
     "LRE": "Longreach"
 }
 
-# ---------- Custom Styling ---------- #
+# ---------- Styling ---------- #
 st.markdown("""
     <style>
         :root {
