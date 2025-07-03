@@ -26,7 +26,7 @@ This is a Python web application that fetches, processes, and visualizes market 
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/your-username/airline-demand-dashboard.git
+git clone https://github.com/Amankumaraman/airline-demand-dashboard.git
 cd airline-demand-dashboard
 ```
 
